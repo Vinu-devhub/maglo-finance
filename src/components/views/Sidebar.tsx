@@ -3,7 +3,7 @@ import { sidebar_above_links, sidebar_below_links } from "@/lib/data";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ page }: { page: string }) => {
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const handleMouseEnter = (e: any) => {
@@ -14,8 +14,10 @@ const Sidebar = () => {
     setHoveredLink(null);
   };
 
+  const selectedPath = page ? page : "dashboard";
+
   return (
-    <div className=" flex flex-col w-64 px-6 py-8 bg-slate-900 text-white">
+    <div className=" flex flex-col w-64 px-6 py-8 bg-darkColor4 text-white">
       <Link to={"/"}>
         <div className=" flex gap-3 items-center mb-10 cursor-pointer">
           <img src={maglo_logo} alt="app-logo" />
@@ -27,15 +29,25 @@ const Sidebar = () => {
       <div className=" flex flex-col justify-between gap-72">
         <div>
           {sidebar_above_links.map((link) => (
-            <Link to={link.href}>
+            <Link key={link.name} to={link.href}>
               <div
                 key={link.name}
-                className=" flex gap-3 p-4 cursor-pointer items-center text-primeColor font-medium hover:bg-primary hover:rounded-lg hover:text-darkColor hover:font-semibold "
+                className={`flex gap-3 p-4 cursor-pointer items-center text-primeColor font-medium  ${
+                  hoveredLink === link.name ||
+                  selectedPath === link.name.toLowerCase()
+                    ? "bg-primary rounded-lg text-darkColor font-semibold"
+                    : ""
+                }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <img
-                  src={hoveredLink === link.name ? link.icon_active : link.icon}
+                  src={
+                    hoveredLink === link.name ||
+                    selectedPath === link.name.toLowerCase()
+                      ? link.icon_active
+                      : link.icon
+                  }
                   alt={`${link.name}-icon`}
                 />
                 <span className=" text-base">{link.name}</span>
