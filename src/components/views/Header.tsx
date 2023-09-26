@@ -11,7 +11,7 @@ type headerTypes = {
 
 const Header = ({ page, username }: headerTypes) => {
   return (
-    <div className="py-4 px-10">
+    <div>
       <div className=" flex justify-between items-center ">
         <h1 className=" capitalize text-2xl text-white font-semibold">
           {page ? page : "Dashboard"}

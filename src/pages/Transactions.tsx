@@ -1,8 +1,11 @@
+import TransactionFullTable from "@/components/views/TransactionFullTable";
 import React from "react";
 
 const Transactions = () => {
   return (
-    <div className=" text-3xl text-rose-500 text-center">Transactions</div>
+    <div className="">
+      <TransactionFullTable />
+    </div>
   );
 };
 

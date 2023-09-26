@@ -32,11 +32,11 @@ const Sidebar = ({ page }: { page: string }) => {
             <Link key={link.name} to={link.href}>
               <div
                 key={link.name}
-                className={`flex gap-3 p-4 cursor-pointer items-center text-primeColor font-medium  ${
+                className={`flex gap-3 p-4 cursor-pointer items-center  font-medium  ${
                   hoveredLink === link.name ||
                   selectedPath === link.name.toLowerCase()
                     ? "bg-primary rounded-lg text-darkColor font-semibold"
-                    : ""
+                    : "text-primeColor"
                 }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
