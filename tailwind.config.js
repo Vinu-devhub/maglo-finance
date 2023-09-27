@@ -79,5 +79,19 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".bg-debit-one-gradient": {
+          background: "linear-gradient(111deg, #2E2B4A 2.85%, #29263F 128.48%)",
+        },
+        ".bg-debit-two-gradient": {
+          background:
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.10) 100%)",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };

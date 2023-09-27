@@ -66,7 +66,7 @@ const Settings = () => {
               <Input
                 type="tel"
                 className=" h-11 px-6 bg-transparent rounded-lg placeholder:text-secondColor border-darkColor2 focus-visible:ring-offset-1"
-                placeholder="+123 456 789"
+                placeholder="+123 456 7890"
               />
             </div>
           </div>
@@ -75,7 +75,7 @@ const Settings = () => {
               <label>Email</label>
               <div className=" relative">
                 <Mail
-                  className=" absolute left-6 top-2.5 text-secondColor "
+                  className=" absolute left-6 top-3 text-secondColor "
                   width={20}
                   height={20}
                 />
@@ -127,6 +127,9 @@ const Settings = () => {
               </div>
             </div>
           </div>
+          <Button className=" w-48 h-14 p-3 rounded-lg text-base font-semibold bg-accentColor hover:bg-accentColor/80">
+            Update
+          </Button> 
         </div>
       </CardContent>
     </Card>
