@@ -179,7 +179,7 @@ export const invoiceColumns: ColumnDef<InvoicesType>[] = [
               {clientName}
             </div>
             <div className=" text-sm font-normal text-secondColor">
-              {invoiceId}
+              Inv: {invoiceId}
             </div>
           </div>
         </div>
