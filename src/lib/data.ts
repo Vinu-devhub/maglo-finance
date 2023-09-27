@@ -186,7 +186,14 @@ export const recentTransactions: TransactionsType[] = [
   },
 ];
 
-export const scheduleTransferData = [
+export type ScheduleTransferType = {
+  username: string;
+  amount: number;
+  schedule_date: string;
+  userImg: string;
+};
+
+export const scheduleTransferData: ScheduleTransferType[] = [
   {
     username: "Saleh Ahmed",
     schedule_date: "April 28, 2022 at 11:00",
@@ -216,5 +223,90 @@ export const scheduleTransferData = [
     schedule_date: "April 14, 2022 at 11:00",
     amount: -228.0,
     userImg: JakirImg,
+  },
+];
+
+export type InvoicesType = {
+  client_name: string;
+  invoiceId: string;
+  invoice_date: string;
+  orders: number;
+  invoice_amount: number;
+  invoice_status: "pending" | "paid" | "unpaid";
+  client_img: string;
+};
+
+export const invoicesData: InvoicesType[] = [
+  {
+    client_name: "Iphone 15 Pro",
+    invoice_amount: 1500,
+    invoice_date: "12 Apr 2023 at 10:00 AM",
+    invoiceId: "MGL0124877",
+    client_img: IphoneImg,
+    orders: 8,
+    invoice_status: "pending",
+  },
+  {
+    client_name: "Netflix Subscription",
+    invoice_amount: 100,
+    invoice_date: "4 Apr 2023 at 07:00 PM",
+    invoiceId: "MGL0124585",
+    client_img: NetflixImg,
+    orders: 7,
+    invoice_status: "paid",
+  },
+  {
+    client_name: "Figma Subscription",
+    invoice_amount: 244.2,
+    invoice_date: "2 Apr 2023 at 11:00 AM",
+    invoiceId: "MGL0124124",
+    client_img: FigmaImg,
+    orders: 16,
+    invoice_status: "unpaid",
+  },
+  {
+    client_name: "Bitcoin Transaction",
+    invoice_amount: 520.84,
+    invoice_date: "1 Apr 2023 at 09:00 AM",
+    invoiceId: "MGL0128544",
+    client_img: BitcoinImg,
+    orders: 28,
+    invoice_status: "paid",
+  },
+  {
+    client_name: "Sajib Rahman",
+    invoice_amount: 500,
+    invoice_date: "30 Mar 2023 at 01:32 PM",
+    invoiceId: "MGL0122143",
+    client_img: SajibRahmanImg,
+    orders: 2,
+    invoice_status: "unpaid",
+  },
+  {
+    client_name: "Instagram Ads",
+    invoice_amount: 100,
+    invoice_date: "28 Mar 2023 at 12:06 PM",
+    invoiceId: "MGL0124877",
+    client_img: InstagramImg,
+    orders: 5,
+    invoice_status: "pending",
+  },
+  {
+    client_name: "UIHUT Subscription",
+    invoice_amount: 85,
+    invoice_date: "24 Mar 2023 at 08:40 AM",
+    invoiceId: "MGL0124244",
+    client_img: UiHutImg,
+    orders: 18,
+    invoice_status: "paid",
+  },
+  {
+    client_name: "City Bank Ltd.",
+    invoice_amount: 400.11,
+    invoice_date: "15 Mar 2023 at 10:05 AM",
+    invoiceId: "MGL0127749",
+    client_img: CityBankImg,
+    orders: 15,
+    invoice_status: "paid",
   },
 ];

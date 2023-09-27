@@ -7,7 +7,7 @@ import { columns } from "./transactions/columns";
 
 const TransactionFullTable = () => {
   return (
-    <div className=" px-10 space-y-4 pb-20">
+    <div className="space-y-4 pb-20">
       <div className=" max-w-xs flex items-center relative py-4">
         <Search className=" absolute left-4 text-secondColor " />
         <Input
