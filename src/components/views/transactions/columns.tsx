@@ -109,10 +109,10 @@ export const recentColumns: ColumnDef<TransactionsType>[] = [
             className=" w-10 h-10"
           />
           <div>
-            <div className=" text-base font-medium text-white">
+            <div className=" text-sm font-medium text-white">
               {productName}
             </div>
-            <div className=" text-sm font-normal text-secondColor">
+            <div className=" text-xs font-normal text-secondColor">
               {companyName}
             </div>
           </div>
@@ -124,7 +124,7 @@ export const recentColumns: ColumnDef<TransactionsType>[] = [
     accessorKey: "product_type",
     header: () => <div className="text-left">Type</div>,
     cell: ({ row }) => (
-      <div className="text-left text-base font-medium text-secondColor capitalize">
+      <div className="text-left text-sm font-medium text-secondColor capitalize">
         {row.original.product_type}
       </div>
     ),
@@ -140,7 +140,7 @@ export const recentColumns: ColumnDef<TransactionsType>[] = [
       }).format(amount);
 
       return (
-        <div className=" text-base font-semibold text-white">{formatted}</div>
+        <div className=" text-sm font-semibold text-white">{formatted}</div>
       );
     },
   },
@@ -153,7 +153,7 @@ export const recentColumns: ColumnDef<TransactionsType>[] = [
       const [dateString, timeString] = dateTimeString.split(" at ");
 
       return (
-        <div className=" text-base font-medium text-secondColor">{dateString}</div>
+        <div className=" text-sm font-medium text-secondColor">{dateString}</div>
       );
     },
   },

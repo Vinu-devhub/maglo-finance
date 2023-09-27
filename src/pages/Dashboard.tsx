@@ -7,7 +7,7 @@ import { total_card_data } from "@/lib/data";
 const Dashboard = () => {
   return (
     <div className=" grid grid-cols-12 gap-10 ">
-      <div className=" col-span-8 flex flex-col gap-8 ">
+      <div className=" col-span-8 flex flex-col gap-7 ">
         <div className=" flex justify-between ">
           {total_card_data.map((card) => (
             <TotalCard title={card.title} amount={card.amount} />

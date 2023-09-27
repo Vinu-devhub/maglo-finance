@@ -11,7 +11,7 @@ type TotalCardType = {
 const TotalCard = ({ title, amount }: TotalCardType) => {
   return (
     <Card
-      className={` w-60 p-5 border-none px-6 ${
+      className={` w-60 py-5 border-none px-6 ${
         title === "Total Balance" ? "bg-darkColor2" : "bg-darkColor"
       } `}
     >
