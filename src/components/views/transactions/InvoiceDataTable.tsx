@@ -6,7 +6,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { InvoicesType } from "@/lib/data";
 import {
   ColumnDef,
   flexRender,
@@ -14,7 +13,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-type TData = InvoicesType[];
+type TData = unknown;
 type TValue = unknown;
 
 type DataTableProps<TData, TValue> = {
@@ -33,7 +32,10 @@ const InvoiceDataTable = ({ columns, data }: DataTableProps<TData, TValue>) => {
     <Table>
       <TableHeader className="">
         {table.getHeaderGroups().map((headerGroup) => (
-          <TableRow key={headerGroup.id} className=" border-darkColor2 hover:bg-darkColor2/80">
+          <TableRow
+            key={headerGroup.id}
+            className=" border-darkColor2 hover:bg-darkColor2/80"
+          >
             {headerGroup.headers.map((header) => {
               return (
                 <TableHead
