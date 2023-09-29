@@ -1,15 +1,19 @@
+import BalanceCard from "@/components/views/BalanceCard";
+import CurrentPayment from "@/components/views/CurrentPayment";
+import UpcomingPayment from "@/components/views/UpcomingPayment";
 import WalletCard from "@/components/views/WalletCard";
-import { MoreHorizontal } from "lucide-react";
-import React from "react";
 
 const Wallets = () => {
   return (
-    <div>
-      <div className=" flex justify-between items-center pb-4">
-        <h1 className=" text-lg font-semibold text-white">Wallet</h1>
-        <MoreHorizontal className=" text-primeColor" />
+    <div className=" grid grid-cols-12 gap-10">
+      <div className=" col-span-4 pr-10 border-r-2 border-solid border-darkColor2">
+        <WalletCard />
+        <BalanceCard />
       </div>
-      <WalletCard />
+      <div className=" col-span-8 space-y-10 pr-40">
+        <CurrentPayment />
+        <UpcomingPayment />
+      </div>
     </div>
   );
 };

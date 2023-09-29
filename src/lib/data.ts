@@ -28,6 +28,13 @@ import JubedImg from "@/assets/JubedAhmed.svg";
 import MoinulImg from "@/assets/MoinulHasan.svg";
 import SalehImg from "@/assets/SalehAhmedMaglo.svg";
 
+import PayoneerIcon from "@/assets/Payoneer-logo.png";
+import PaypalIcon from "@/assets/Paypal-logo.png";
+import RemitlyIcon from "@/assets/Remitly-logo.png";
+import WiseIcon from "@/assets/Wise-logo.png";
+import FaceboonIcon from "@/assets/facebook-logo.png";
+import LinkedinIcon from "@/assets/linkedin-logo.png";
+
 export const sidebar_above_links = [
   {
     icon: DashboardOff,
@@ -308,5 +315,47 @@ export const invoicesData: InvoicesType[] = [
     client_img: CityBankImg,
     orders: 15,
     invoice_status: "paid",
+  },
+];
+
+export const upcomingPayment: ScheduleTransferType[] = [
+  {
+    username: "Facebook Ads",
+    schedule_date: "20 Apr 2022, 06:55 PM",
+    amount: 400.0,
+    userImg: FaceboonIcon,
+  },
+  {
+    username: "LinkedIn Ads",
+    schedule_date: "18 Apr 2022, 08:58 PM",
+    amount: 200.5,
+    userImg: LinkedinIcon,
+  },
+];
+
+export const regularPayment: ScheduleTransferType[] = [
+  {
+    username: "Payoneer",
+    schedule_date: "20 Apr 2022, 06:55 PM",
+    amount: 4350.24,
+    userImg: PayoneerIcon,
+  },
+  {
+    username: "Remitly",
+    schedule_date: "18 Apr 2022, 08:58 PM",
+    amount: 1327.29,
+    userImg: RemitlyIcon,
+  },
+  {
+    username: "Wise",
+    schedule_date: "15 Apr 2022, 02:55 AM",
+    amount: -24.32,
+    userImg: WiseIcon,
+  },
+  {
+    username: "Paypal",
+    schedule_date: "14 Apr 2022, 07:40 PM",
+    amount: -400.65,
+    userImg: PaypalIcon,
   },
 ];

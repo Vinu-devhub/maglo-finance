@@ -22,7 +22,7 @@ const Dashboard = () => {
           <RecentTransactionsCard />
         </div>
       </div>
-      <div className=" col-span-4 flex flex-col gap-44">
+      <div className=" col-span-4 flex flex-col">
         <div>
           <div className=" flex justify-between items-center pb-4">
             <h1 className=" text-lg font-semibold text-white">Wallet</h1>
