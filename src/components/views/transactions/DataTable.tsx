@@ -6,6 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TransactionsType } from "@/lib/data";
 import {
   ColumnDef,
   flexRender,
@@ -13,15 +14,12 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-type TData = unknown;
-type TValue = unknown;
-
-type DataTableProps<TData, TValue> = {
-  columns: ColumnDef<TData, TValue>[];
-  data: TData[];
+type DataTableProps = {
+  columns: ColumnDef<TransactionsType, unknown>[];
+  data: TransactionsType[];
 };
 
-const DataTable = ({ columns, data }: DataTableProps<TData, TValue>) => {
+const DataTable = ({ columns, data }: DataTableProps) => {
   const table = useReactTable({
     data,
     columns,
