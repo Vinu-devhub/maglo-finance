@@ -147,7 +147,7 @@ export const recentColumns: ColumnDef<TransactionsType>[] = [
     cell: ({ row }) => {
       const dateTimeString: string = row.getValue("transaction_date");
 
-      const [dateString, timeString] = dateTimeString.split(" at ");
+      const [dateString] = dateTimeString.split(" at ");
 
       return (
         <div className=" text-sm font-medium text-secondColor">

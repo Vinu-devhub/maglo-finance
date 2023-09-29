@@ -1,6 +1,5 @@
 import { recentTransactions } from "@/lib/data";
 import { ChevronRight } from "lucide-react";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Card, CardHeader, CardTitle } from "../ui/card";

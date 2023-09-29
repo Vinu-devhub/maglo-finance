@@ -1,6 +1,5 @@
 import { recentTransactions } from "@/lib/data";
 import { Search } from "lucide-react";
-import React from "react";
 import { Input } from "../ui/input";
 import DataTable from "./transactions/DataTable";
 import { columns } from "./transactions/columns";

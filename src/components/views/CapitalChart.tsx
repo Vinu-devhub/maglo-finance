@@ -1,15 +1,12 @@
 import { chartData } from "@/lib/data";
-import React from "react";
 import {
-  CartesianAxis,
   CartesianGrid,
-  Legend,
   Line,
   LineChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
-  YAxis,
+  YAxis
 } from "recharts";
 
 const CapitalChart = () => {
